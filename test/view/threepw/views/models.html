@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script src="../js/jquery.min.js"></script>
+
+    <!--    x3DOM-->
+    <script type='text/javascript' src='../js/x3dom.js'> </script>
+    <link rel='stylesheet' type='text/css' href='../css/x3dom.css'></link>
+    <!-- jQuery and JavaScript Bundle with Popper  使用了jquery以及bootstrap -->
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/models.css">
+    <title>Title</title>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <a class="navbar-brand" href="#">
+            <h1>1ocaColaJourney</h1>
+            <p>Refreshing the world, one story at a time</p>
+        </a>
+    </div>
+    <nav>
+        <a href="index.html" target="_blank">Home</a>
+        <a>About</a>
+        <a href="models.html" target="_blank">Models</a>
+        <a>Contact</a>
+    </nav>
+</header>
+
+<section class="models">
+    <div class="models-left">
+        <div class="title"></div>
+        <div class="content" style="display: flex;flex-direction: column;width: 100%">
+        <div class="op" style="padding-left:5px ">
+            <h4 >Camera Views</h4>
+            <button style="background: rgb(40,167,69)"  onclick="defaultO()">Default</button>
+            <button style="background: rgb(134,142,150)" onclick="left()">left</button>
+            <button style="background: rgb(134,142,150)" onclick="right()">right</button>
+<!--            <button style="background: rgb(0,123,255)"  onclick="document.getElementById('top').setAttribute('set_bind','true');">top</button>-->
+        </div>
+        <div class="op" style="padding-left:5px ">
+            <h4>Animation Options</h4>
+            <button style="background: rgb(40,167,69)" onclick="rotateX()">RotX</button>
+            <button style="background: rgb(134,142,150)" onclick="rotateY()">RotY</button>
+            <button style="background: rgb(134,142,150)" onclick="rotateZ()">RotZ</button>
+            <button style="background: rgb(0,123,255)" onclick="stopAnimation()">Stop</button>
+        </div>
+        <div class="op" style="padding-left:5px ">
+            <h4>Render and Lighting Options</h4>
+            <button style="background: rgb(40,167,69)" onclick="headLightOnOff()">Headlight</button>
+            <button style="background: rgb(134,142,150)" onclick="lightDefault()">Default</button>
+        </div>
+
+        </div>
+    </div>
+    <div class="models-middle">
+        <div class="title">
+            X3D Models
+        </div>
+        <div class="content">
+            <div class="content-title">
+                <h1 class="sub-title"></h1>
+                <div style="margin-top: 20px">
+                    <button onclick="changeName('coke')">Coke</button>
+                    <button onclick="changeName('sprite')">Sprite</button>
+                    <button onclick="changeName('papper')" >Pepper</button>
+                </div>
+            </div>
+            <div class="content-son">
+                <x3d width='500px' height='400px' >
+                    <scene DEF='scene'>
+                        <Viewpoint id="front" position="-3.07427 50.25329 2010.79608" orientation="0.00451 0.99989 0.00319 6.25833" description="camera"></Viewpoint>
+                        <Viewpoint id="right" position="-3.07427 50.25329 2010.79608" orientation="1.00451 0.99989 0.00319 6.25833" description="camera"></Viewpoint>
+                        <Viewpoint id="left" position="2.70190 0.25329 -0.57128" orientation="0.00451 0.99612 -0.03175 1.73722" description="camera"></Viewpoint>
+                        <Viewpoint id="top" position="0.05087 3.78235 -1.75890" orientation="0.00451 0.87466 0.48473 3.12040" description="camera"></Viewpoint>
+                        <directionalLight id="directional" direction='0 -1 0' on ="TRUE" intensity='1.0' shadowIntensity='0.0'>
+                        </directionalLight>
+
+
+
+                        <Transform  id="rotation">
+
+                            <inline url="../models/3.x3d" id="tdModels">
+                                <navigationInfo id="head" headlight='true' type='"EXAMINE"'></navigationInfo>
+                                <Background groundColor='(1,1,1)' skyColor='(1,1,1)'></Background>
+                            </inline>
+                        </Transform>
+                    </scene>
+                </x3d>
+            </div>
+        </div>
+    </div>
+    <div class="models-right">
+        <div class="title">Gallery</div>
+        <div class="content">
+            <h1 style="width: 100%;height: 10%">3D Images</h1>
+            <div style="width: 100%;height: 90%;display: grid; grid-template-columns: 1fr 1fr 1fr;" class="imgsZ">
+            </div>
+        </div>
+    </div>
+</section>
+<div class="footer-content">
+    <h1>History of Coca Cola</h1>
+    <h4>Atlanta Beginnings</h4>
+    <p>It was 1886, and in New York Harbour, workers were constructing the Statue of Liberty. Eight hundred miles away, another great American symbol was about to be unveiled. Like many people who change history, John Pemberton, an Atlanta pharmacist, was inspired by simple curiosity. One afternoon, he stirred up a fragrant, caramel-coloured liquid and, when it was done, he carried it a few doors down to Jacobs' Pharmacy. Here, the mixture was combined with carbonated water and sampled by customers who all agreed - this new drink was something special. So Jacobs' Pharmacy put it on sale for five cents (about 3p) a glass.</p>
+</div>
+<footer>
+<div style="float: left;padding-left: 20px;margin-top: 20px;font-size: 20px">
+    你好，X3DOM
+</div>
+    <div style="float: right;padding-right: 20px;margin-top: 20px">
+        <img src="../imgs/github-fill.svg" style="width: 50px;height: 50px;cursor: pointer" onclick="toGitHub()">
+    </div>
+</footer>
+<script src="../js/models.js"></script>
+<script src="../js/animation.js"></script>
+
+</body>
+</html>
