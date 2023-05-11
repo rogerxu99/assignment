@@ -1,1 +1,142 @@
+body {
+  min-width: 320px;
+  max-width: 750px;
+  margin: 0 auto;
+  background-color: #f2f4f7;
+}
+a {
+  text-decoration: none;
+  color: #707070;
+}
+@font-face {
+  font-family: cocaColaFont;
+  src: url("../font/Coca Cola ii.ttf");
+}
+@media screen and (min-width: 750px) {
+  html {
+    font-size: 37.5px !important;
+  }
+}
+.warp {
+  background-color: #fff;
+  padding-bottom: 1.146667rem;
+}
 
+.header {
+  height: 2.133333rem;
+  border-bottom: 1px solid #eaeaea;
+  text-align: center;
+  line-height: 2.133333rem;
+  font-size: 0.993333rem;
+  color: #1c1c1c;
+  font-family: cocaColaFont;
+
+}
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.5rem 0 0rem 0;
+}
+.nav .item {
+  display: flex;
+  width: 100%;
+  height: 11.706667rem;
+  background: url("../images/main_3D_2048.jpg");
+  background-size: 100% 100%;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.nav .item .item-content{
+  position: absolute;
+  width: 10.013333rem;
+  height: 8.513333rem;
+  padding: 0.5rem 0.5rem 0rem 0.5rem;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: rgba(255,255,255,0.6);
+  border-radius: 5px;
+
+}
+.nav .item .item-content h2{
+  font-size:0.193333rem;
+}
+.nav .item .item-content h3{
+  font-size:0.000033rem;
+}
+.nav .item .item-content p{
+  font-size:0.000033rem;
+}
+
+.content {
+  padding: 1.066667rem 0.64rem;
+  background-color: #fff;
+  margin-top: 0.266667rem;
+}
+.content .imgBg{
+  width: 100%;
+  height: 8.513333rem;
+}
+.content .content-text{
+  width: 100%;
+  height: 7.513333rem;
+  font-size:0.000033rem;
+  margin-top:0.513333rem ;
+
+}
+.footer-top{
+  width: 100%;
+  height: 1.513333rem;
+  font-size:0.000033rem;
+  margin-top:0.513333rem ;
+  background-color: #fff;
+  line-height: 1.513333rem;
+
+  /*position: fixed;*/
+  /*left: 0;*/
+  /*bottom: 2.933333rem;*/
+
+}
+.content .con-hd {
+  display: flex;
+  justify-content: space-between;
+  height: 1.013333rem;
+  line-height: 1.013333rem;
+  margin-bottom: 0.906667rem;
+}
+.content .con-hd h4 {
+  margin: 0;
+  font-size: 0.746667rem;
+  color: #333333;
+
+}
+
+.footer {
+  /*position: fixed;*/
+  /*left: 0;*/
+  /*bottom: 0;*/
+  height: 2.933333rem;
+  width: 100%;
+  z-index: 99999;
+  display: flex;
+  padding: 0.533333rem;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+.footer .item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer .item img {
+  width: 1.04rem;
+  height: 1.093333rem;
+}
+.footer .item p {
+  font-size: 0.586667rem;
+  color: #666666;
+  margin-top: 0.266667rem;
+}
