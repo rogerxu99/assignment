@@ -1,0 +1,64 @@
+@font-face {
+    font-family: cocaColaFont;
+    src: url("../font/Coca Cola ii.ttf");
+}
+header{
+    width: 100%;
+    height: 10%;
+    background: bisque;
+    /*position: fixed;*/
+}
+header .logo{
+    width: 15%;
+    height: 100%;
+    margin-left: 1%;
+    float: left;
+}
+header .logo .navbar-brand{
+    display: inline-block;
+    line-height: inherit;
+    white-space: nowrap;
+}
+.logo h1{
+    font-family: cocaColaFont;
+    font-size: 50px;
+    float: left;
+    padding-left: 15px;
+    padding-top: 15px;
+    color: black;
+}
+.logo h1:hover,p:hover{
+    color: red;
+}
+
+
+.logo p{
+    font-size: 14px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 65px;
+    color: black;
+}
+
+nav{
+    width: 20%;
+    height: 100%;
+    margin-right: 1%;
+    float: right;
+}
+nav a{
+    display: inline-block;
+    width: 60px;
+    height: 42px;
+    text-align: center;
+    line-height: 42px;
+    margin-top: 30px;
+    cursor: pointer;
+    margin-left: 20px;
+    font-weight: 600;
+    font-size: 16px;
+}
+nav a:hover{
+    background: #3399ff;
+}
+

@@ -1,0 +1,53 @@
+section{
+    width: 100%;
+    height: 85%;
+}
+
+.left{
+    float: left;
+    width: 50%;
+    height: 100%;
+    background: url("../imgs/main_3D_2048.jpg");
+    background-size: 100% 100%;
+    position: relative;
+
+
+
+}
+
+.left-text{
+    width: 500px;
+    height: 120px;
+    background-color: rgba(255,255,255,0.6);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+
+.right{
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+.right .item{
+    width: 100%;
+    height: 33%;
+    padding: 10px;
+}
+.item .bg{
+    height: 100%;
+    width: 50%;
+    background: url("../imgs/coca_cola.jpg");
+    background-size: 100% 100%;
+    float: left;
+}
+.item .item-text{
+    height: 100%;
+    width: 49%;
+    float: left;
+    margin-left: 1%;
+}
